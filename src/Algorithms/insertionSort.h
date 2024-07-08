@@ -1,14 +1,5 @@
-//
-// Created by andre on 3/28/2024.
-//
-
-#ifndef SORTING_ALGORITHM_VISUALIZATION_INSERTIONSORT_H
-#define SORTING_ALGORITHM_VISUALIZATION_INSERTIONSORT_H
-
-
-class insertionSort {
+class insertionSort
+{
+public:
 
 };
-
-
-#endif //SORTING_ALGORITHM_VISUALIZATION_INSERTIONSORT_H

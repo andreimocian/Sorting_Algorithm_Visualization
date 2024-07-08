@@ -10,7 +10,9 @@ FetchContent_Declare(SFML
         GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Sorting_Algorithm_Visualization src/main.cpp)
+add_executable(Sorting_Algorithm_Visualization src/main.cpp
+        src/Algorithms/insertionSort.cpp
+        src/Algorithms/insertionSort.h "src/Program.h" "src/Program.cpp")
 target_link_libraries(Sorting_Algorithm_Visualization PRIVATE sfml-graphics)
 target_compile_features(Sorting_Algorithm_Visualization PRIVATE cxx_std_17)
 
