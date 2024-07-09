@@ -1,15 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include <ctime>
 #include "Program.h"
+#include "ui.h"
 #include "Algorithms/insertionSort.h"
 
 Program::Program()
 {
+    state = 0;
     w_width = 1024, w_height = 512;
     window.create(sf::VideoMode(w_width, w_height), "Visual Sort", sf::Style::Default);
 
-    genereta_rect();
+    run();
+}
 
+void Program::run()
+{
     while (window.isOpen())
     {
         sf::Event event;
@@ -21,12 +26,51 @@ Program::Program()
             }
         }
         window.clear();
-        render_rect();
+        run_logic();
         window.display();
     }
 }
 
-void Program::genereta_rect()
+void Program::run_logic()
+{
+    switch (state)
+    {
+    case 0:
+        ui.render_ui(window);
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+        {
+            arr.clear();
+            generete_rect();
+            state = ui.get_algorithm() + 1;
+        }
+        break;
+    case 1:
+        render_rect();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        {
+            state = 0;
+        }
+        break;
+    case 2:
+        render_rect();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        {
+            state = 0;
+        }
+        break;
+    case 3:
+        render_rect();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        {
+            state = 0;
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+void Program::generete_rect()
 {
     srand((unsigned)time(NULL));
 
@@ -37,7 +81,6 @@ void Program::genereta_rect()
     for (int i = 0; i < rect_number; i++)
     {
         height = 1 + rand() % 400;
-        printf("%d ", height);
         rectangle.setSize(sf::Vector2f(rectangle_width, height));
         rectangle.setPosition(position, w_height - height);
         arr.push_back(rectangle);
