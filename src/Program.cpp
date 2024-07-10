@@ -45,21 +45,26 @@ void Program::run_logic()
         }
         break;
     case 1:
-        render_rect();
+        draw_rect();
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             state = 0;
         }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && clock.getElapsedTime().asMilliseconds() >= 200.0f)
+        {
+            clock.restart();
+            insertion_sort.insertion_sort_run(arr, window);
+        }
         break;
     case 2:
-        render_rect();
+        draw_rect();
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             state = 0;
         }
         break;
     case 3:
-        render_rect();
+        draw_rect();
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             state = 0;
@@ -88,7 +93,7 @@ void Program::generete_rect()
     }
 }
 
-void Program::render_rect()
+void Program::draw_rect()
 {
     for (int i = 0; i < arr.size(); i++)
     {
