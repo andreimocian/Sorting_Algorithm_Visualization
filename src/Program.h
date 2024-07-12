@@ -3,6 +3,8 @@
 #include <vector>
 #include "ui.h"
 #include "Algorithms/insertionSort.h"
+#include "Algorithms/bubbleSort.h"
+
 class Program
 {
 public:
@@ -11,6 +13,7 @@ public:
 	void generete_rect();
 	void draw_rect();
 	void run_logic();
+	void make_green();
 
 	std::vector<sf::RectangleShape>arr;
 	
@@ -22,6 +25,7 @@ private:
 	int state;
 	UI ui;
 	insertionSort insertion_sort;
+	bubbleSort bubble_sort;
 	sf::Clock clock;
 };
 

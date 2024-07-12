@@ -3,6 +3,7 @@
 #include "Program.h"
 #include "ui.h"
 #include "Algorithms/insertionSort.h"
+#include "algorithms/bubbleSort.h"
 
 Program::Program()
 {
@@ -54,6 +55,7 @@ void Program::run_logic()
         {
             clock.restart();
             insertion_sort.insertion_sort_run(arr, window);
+            make_green();
         }
         break;
     case 2:
@@ -61,6 +63,12 @@ void Program::run_logic()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             state = 0;
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && clock.getElapsedTime().asMilliseconds() >= 200.0f)
+        {
+            clock.restart();
+            bubble_sort.bubble_sort_run(arr, window);
+            make_green();
         }
         break;
     case 3:
@@ -98,5 +106,13 @@ void Program::draw_rect()
     for (int i = 0; i < arr.size(); i++)
     {
         window.draw(arr[i]);
+    }
+}
+
+void Program::make_green()
+{
+    for (int i = 0; i < arr.size(); i++)
+    {
+        arr[i].setFillColor(sf::Color::Green);
     }
 }

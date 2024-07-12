@@ -11,13 +11,18 @@ void insertionSort::insertion_sort_run(std::vector<sf::RectangleShape>& arr, sf:
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				return;
+			arr[p].setFillColor(sf::Color::Blue);
+			arr[p - 1].setFillColor(sf::Color::Blue);
 			if (clock.getElapsedTime().asMilliseconds() >= 10.0f)
 			{
 				swap_rect(arr[p], arr[p - 1], window);
 				p--;
 				window_handler(arr, window);
 				clock.restart();
+				arr[p + 1].setFillColor(sf::Color::White);
+				arr[p].setFillColor(sf::Color::White);
 			}
+			
 		}
 	}
 }
