@@ -3,7 +3,8 @@
 #include "Program.h"
 #include "ui.h"
 #include "Algorithms/insertionSort.h"
-#include "algorithms/bubbleSort.h"
+#include "Algorithms/bubbleSort.h"
+#include "Algorithms/selectionSort.h"
 
 Program::Program()
 {
@@ -76,6 +77,12 @@ void Program::run_logic()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             state = 0;
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && clock.getElapsedTime().asMilliseconds() >= 200.0f)
+        {
+            clock.restart();
+            selection_sort.selection_sort_run(arr, window);
+            make_green();
         }
         break;
     default:

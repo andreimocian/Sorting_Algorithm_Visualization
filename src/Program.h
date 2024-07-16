@@ -4,6 +4,7 @@
 #include "ui.h"
 #include "Algorithms/insertionSort.h"
 #include "Algorithms/bubbleSort.h"
+#include "Algorithms/selectionSort.h"
 
 class Program
 {
@@ -26,6 +27,7 @@ private:
 	UI ui;
 	insertionSort insertion_sort;
 	bubbleSort bubble_sort;
+	selectionSort selection_sort;
 	sf::Clock clock;
 };
 
