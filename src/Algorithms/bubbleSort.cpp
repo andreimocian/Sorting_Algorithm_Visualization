@@ -23,7 +23,7 @@ void bubbleSort::bubble_sort_run(std::vector<sf::RectangleShape>& arr, sf::Rende
 				arr[i].setFillColor(sf::Color::White);
 				arr[i + 1].setFillColor(sf::Color::White);
 			}
-			if (clock.getElapsedTime().asMilliseconds() >= 10.0f)
+			if (clock.getElapsedTime().asMilliseconds() >= 5.0f)
 			{
 				i++;
 				clock.restart();

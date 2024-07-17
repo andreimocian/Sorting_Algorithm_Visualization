@@ -5,6 +5,7 @@
 #include "Algorithms/insertionSort.h"
 #include "Algorithms/bubbleSort.h"
 #include "Algorithms/selectionSort.h"
+#include "Algorithms/mergeSort.h"
 
 class Program
 {
@@ -28,6 +29,7 @@ private:
 	insertionSort insertion_sort;
 	bubbleSort bubble_sort;
 	selectionSort selection_sort;
+	mergeSort merge_sort;
 	sf::Clock clock;
 };
 

@@ -8,6 +8,7 @@ UI::UI()
 	//algorithm 1: Insertion sort
 	//algorithm 2: Bubble sort
 	//algorithm 3: Selection sort
+	//algorithm 4: Merge sort
 	alg_selector = 0;
 	sf::Text text;
 	
@@ -21,6 +22,9 @@ UI::UI()
 	algorithms.push_back(text);
 
 	text.setString("Selection sort");
+	algorithms.push_back(text);
+
+	text.setString("Merge sort");
 	algorithms.push_back(text);
 }
 

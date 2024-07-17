@@ -85,6 +85,19 @@ void Program::run_logic()
             make_green();
         }
         break;
+    case 4:
+        draw_rect();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        {
+            state = 0;
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && clock.getElapsedTime().asMilliseconds() >= 200.0f)
+        {
+            clock.restart();
+            merge_sort.merge_sort_run(arr, window);
+            make_green();
+        }
+        break;
     default:
         break;
     }
