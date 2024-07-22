@@ -129,10 +129,30 @@ void Program::draw_rect()
     }
 }
 
+void Program::window_display()
+{
+    sf::Event event;
+    while (window.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+        {
+            window.close();
+            exit(0);
+        }
+    }
+    window.clear();
+    for (int i = 0; i < arr.size(); i++)
+    {
+        window.draw(arr[i]);
+    }
+    window.display();
+}
+
 void Program::make_green()
 {
     for (int i = 0; i < arr.size(); i++)
     {
         arr[i].setFillColor(sf::Color::Green);
+        window_display();
     }
 }

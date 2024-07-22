@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>
-class mergeSort 
+class mergeSort
 {
 public:
 	void merge_sort_run(std::vector<sf::RectangleShape>& arr, sf::RenderWindow& window);

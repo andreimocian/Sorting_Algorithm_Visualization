@@ -15,6 +15,7 @@ public:
 	void generete_rect();
 	void draw_rect();
 	void run_logic();
+	void window_display();
 	void make_green();
 
 	std::vector<sf::RectangleShape>arr;
