@@ -92,27 +92,8 @@ void mergeSort::merge(int left, int right, int m, std::vector<sf::RectangleShape
 			i++;
 			j++;
 			clock.restart();
-			window_handler(arr, window);
+			alg.window_handler(arr, window);
 		}
 	}
-	window_handler(arr, window);
-}
-
-void mergeSort::window_handler(std::vector<sf::RectangleShape>& arr, sf::RenderWindow& window)
-{
-	sf::Event event;
-	while (window.pollEvent(event))
-	{
-		if (event.type == sf::Event::Closed)
-		{
-			window.close();
-			exit(0);
-		}
-	}
-	window.clear();
-	for (int i = 0; i < arr.size(); i++)
-	{
-		window.draw(arr[i]);
-	}
-	window.display();
+	alg.window_handler(arr, window);
 }

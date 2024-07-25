@@ -1,4 +1,5 @@
 #pragma once
+#include "algorithms.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
 class mergeSort
@@ -11,4 +12,5 @@ public:
 private:
 	std::vector <sf::RectangleShape> tmp;
 	sf::Clock clock;
+	algorithms alg;
 };

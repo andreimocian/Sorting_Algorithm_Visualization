@@ -1,4 +1,5 @@
 #pragma once
+#include "algorithms.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
 class selectionSort
@@ -10,4 +11,5 @@ public:
 
 private:
 	sf::Clock clock;
+	algorithms alg;
 };

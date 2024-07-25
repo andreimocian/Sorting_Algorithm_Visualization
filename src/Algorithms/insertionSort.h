@@ -1,4 +1,5 @@
 #pragma once
+#include "algorithms.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
 
@@ -10,4 +11,5 @@ public:
 	void window_handler(std::vector<sf::RectangleShape>& arr, sf::RenderWindow& window);
 private:
 	sf::Clock clock;
+	algorithms alg;
 };
