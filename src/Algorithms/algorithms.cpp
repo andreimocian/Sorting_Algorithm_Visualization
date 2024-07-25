@@ -28,3 +28,12 @@ void algorithms::window_handler(std::vector<sf::RectangleShape>& arr, sf::Render
 	}
 	window.display();
 }
+
+void algorithms::make_green(std::vector<sf::RectangleShape>& arr, sf::RenderWindow& window)
+{
+	for (int i = 0; i < arr.size(); i++)
+	{
+		arr[i].setFillColor(sf::Color::Green);
+		window_handler(arr, window);
+	}
+}

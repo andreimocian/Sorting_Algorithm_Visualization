@@ -25,4 +25,5 @@ void insertionSort::insertion_sort_run(std::vector<sf::RectangleShape>& arr, sf:
 			
 		}
 	}
+	alg.make_green(arr, window);
 }

@@ -2,9 +2,6 @@
 #include <ctime>
 #include "Program.h"
 #include "ui.h"
-#include "Algorithms/insertionSort.h"
-#include "Algorithms/bubbleSort.h"
-#include "Algorithms/selectionSort.h"
 
 Program::Program()
 {
@@ -56,7 +53,6 @@ void Program::run_logic()
         {
             clock.restart();
             insertion_sort.insertion_sort_run(arr, window);
-            make_green();
         }
         break;
     case 2:
@@ -69,7 +65,6 @@ void Program::run_logic()
         {
             clock.restart();
             bubble_sort.bubble_sort_run(arr, window);
-            make_green();
         }
         break;
     case 3:
@@ -82,7 +77,6 @@ void Program::run_logic()
         {
             clock.restart();
             selection_sort.selection_sort_run(arr, window);
-            make_green();
         }
         break;
     case 4:
@@ -95,7 +89,6 @@ void Program::run_logic()
         {
             clock.restart();
             merge_sort.merge_sort_run(arr, window);
-            make_green();
         }
         break;
     default:

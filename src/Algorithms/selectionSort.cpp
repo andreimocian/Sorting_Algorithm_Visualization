@@ -25,4 +25,5 @@ void selectionSort::selection_sort_run(std::vector<sf::RectangleShape>& arr, sf:
 			}
 		}	
 	}
+	alg.make_green(arr, window);
 }

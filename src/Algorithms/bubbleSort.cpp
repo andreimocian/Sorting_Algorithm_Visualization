@@ -30,5 +30,5 @@ void bubbleSort::bubble_sort_run(std::vector<sf::RectangleShape>& arr, sf::Rende
 			}
 		}
 	} while (!sorted);
-	
+	alg.make_green(arr, window);
 }
